@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Preguntas</title>
+</head>
+<body>
+    <h1>Preguntas del laboratorio</h1>
+
+    <h2>1. Que ventajas tiene escribir el codigo SQL unicamente en la capa del modelo?</h2>
+    <p>
+        Ayuda a separar responsabilidades. El modelo se encarga de la base de datos,
+        el controlador maneja la logica de la peticion y la vista solo muestra la informacion.
+        Esto hace que el codigo sea mas ordenado, facil de mantener y reutilizable.
+    </p>
+
+    <h2>2. Que es SQL injection y como se puede prevenir?</h2>
+    <p>
+        SQL injection es un ataque donde alguien intenta insertar codigo SQL malicioso
+        en una consulta. Se puede prevenir usando consultas parametrizadas, placeholders
+        y evitando concatenar directamente valores del usuario dentro del query.
+    </p>
+
+    <h2>3. Por que en la practica las credenciales de Supabase viven en un archivo .env y no directamente en database.js?</h2>
+    <p>
+        Porque las credenciales son informacion sensible. Si se escriben directo en
+        database.js y se hace commit, otras personas podrian ver la contrasena o URL
+        de conexion. Dos consecuencias concretas son que alguien podria conectarse a
+        la base de datos sin permiso y que habria que cambiar las credenciales expuestas.
+    </p>
+
+    <h2>4. Que problema resuelve usar un pool de conexiones en lugar de abrir y cerrar una conexion nueva en cada request?</h2>
+    <p>
+        Un pool reutiliza conexiones ya abiertas. Esto evita crear una conexion nueva
+        por cada peticion, mejora el rendimiento y reduce la carga sobre la base de datos.
+    </p>
+
+    <h2>5. Ejemplo de query inseguro y version parametrizada</h2>
+
+    <p>Ejemplo inseguro:</p>
+    <pre>
+const sql = "SELECT * FROM usuarios WHERE correo = '" + correo + "'";
+    </pre>
+
+    <p>Ejemplo parametrizado:</p>
+    <pre>
+const sql = "SELECT * FROM usuarios WHERE correo = $1";
+pool.query(sql, [correo]);
+    </pre>
+
+    <p>
+        El segundo ejemplo es mas seguro porque el valor del usuario no se pega directo
+        al string SQL. Si alguien escribe algo como ' OR 1=1 --, se interpreta como texto
+        y no como parte de la consulta.
+    </p>
+</body>
+</html>
