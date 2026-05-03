@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page Personal</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <h2 id="logo">Mi Landing</h2>
+
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#features">Features</a>
+                <a href="#reflexion">Reflexion</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="inicio" class="hero">
+                <h1>Bienvenido a mi pagina</h1>
+                <p>
+                    Esta landing page fue creada para practicar CSS.
+                </p>
+                <a class="btn" href="#features">Ver más</a>
+            </section>
+
+            <section id="features" class="features">
+                <h2>Secciones principales</h2>
+                <p>
+                    Estas tarjetas muestran algunos temas que se trabajaron en esta actividad.
+                </p>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>HTML semantico</h3>
+                        <p>
+                            Uso de etiquetas como header, nav, main, section,
+                            article y footer para estructurar mejor la página.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Box Model</h3>
+                        <p>
+                            Las tarjetas usan padding, margin, border y border-radius
+                            para aplicar el modelo de caja.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Flexbox</h3>
+                        <p>
+                            Se utiliza Flexbox para acomodar la barra de navegacion,
+                            centrar el hero y organizar las tarjetas.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="reflexion" class="reflexion">
+                <h2>Preguntas de reflexión</h2>
+
+                <article>
+                    <h3>¿Cual es la diferencia entre padding y margin?</h3>
+                    <p>
+                        El padding es el espacio interno entre el contenido y el borde
+                        de un elemento. El margin es el espacio externo que separa un
+                        elemento de otros elementos.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>¿Por que se recomienda usar box-sizing: border-box?</h3>
+                    <p>
+                        Porque hace que el padding y el borde se incluyan dentro del tamano
+                        total del elemento. Esto ayuda a que sea más facil controlar el ancho
+                        y alto de las cajas.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>¿Qué significa disenar con enfoque mobile-first?</h3>
+                    <p>
+                        Significa disenar primero pensando en pantallas pequenas, como celulares,
+                        y despues adaptar el diseno para tablets y computadoras usando media queries.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>¿En que situaciones preferirias rem sobre px?</h3>
+                    <p>
+                        Preferiria usar rem para tamanos de letra y espacios, porque se adapta mejor
+                        al tamano base del documento y facilita crear diseños responsivos. Usaria px
+                        principalmente para bordes o sombras pequenas.
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <footer id="contacto">
+            <p>Nombre: Inaki Mancera</p>
+            <p>Matrícula: A01708827</p>
+            <p>Correo: A01708827@tec.mx</p>
+            <p>Editor utilizado: Visual Studio Code</p>
+            <p>
+                Sitio del editor:
+                <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+            </p>
+        </footer>
+    </body>
+</html>

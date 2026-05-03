@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML</title>
+  </head>
+  <body>
+    <!-- Content -->
+    <p id="parrafo">Lorem ipsum dolor sit </p>
+    <p id="parrafo">Parrafo 2 </p>
+
+    <!-- Content 2 -->
+    <p id="par1">Lorem ipsum dolor sit </p>
+    <div id="par2">
+        <p>Parráfo 2 </p>
+    </div>
+
+    <!-- Content 3 -->
+    <h1>Películas Famosas</h1>
+    <ul class="list">
+        <li>Titanic</li>
+        <li>Jurassic Park</li>
+        <li>El señor de los Anillos</li>
+        <li>Star Wars</li>
+    </ul>
+
+    <!-- Preguntas -->
+    <section id="preguntas">
+      <h2>Preguntas</h2>
+
+      <article>
+        <h3>1. ¿Por que es una buena practica usar JavaScript para checar que sean validos los inputs de las formas antes de enviar los datos al servidor?</h3>
+        <p>
+          Es una buena practica porque permite revisar los datos desde el navegador antes de enviarlos.
+          Esto ayuda a que el usuario corrija errores rapidamente, por ejemplo si dejo un campo vacio,
+          escribio mal un correo o puso una contrasena muy corta. Tambien evita enviar solicitudes
+          innecesarias al servidor.
+        </p>
+      </article>
+
+      <article>
+        <h3>2. ¿Como puedes saltarte la seguridad de validaciones hechas con JavaScript?</h3>
+        <p>
+          Las validaciones hechas solo con JavaScript se pueden saltar desactivando JavaScript en el navegador,
+          modificando el codigo desde las herramientas de desarrollador o enviando la solicitud directamente
+          al servidor con datos alterados. Por eso no deben ser la unica capa de seguridad.
+        </p>
+      </article>
+
+      <article>
+        <h3>3. Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por que la primera pregunta dice que es una buena practica?</h3>
+        <p>
+          Porque JavaScript mejora la experiencia del usuario y ayuda a detectar errores antes de enviar la
+          informacion, pero no sustituye la validacion del servidor. Lo correcto es validar en el cliente con
+          JavaScript para hacer la pagina mas comoda y tambien validar en el servidor para proteger realmente
+          los datos y el sistema.
+        </p>
+      </article>
+    </section>  
+
+    <!-- Investigación adicional -->
+<section id="investigacion">
+  <h2>Investigacion adicional</h2>
+
+  <article>
+    <h3>Uso de la etiqueta a</h3>
+    <p>
+      La etiqueta <strong>&lt;a&gt;</strong> sirve para crear enlaces a paginas internas o externas.
+      Si se usa normalmente, abre el enlace en la misma pestana:
+      <strong>&lt;a href="pagina.html"&gt;Ir&lt;/a&gt;</strong>.
+      Si se quiere abrir en una nueva pestana, se usa
+      <strong>target="_blank"</strong>.
+    </p>
+  </article>
+
+  <article>
+    <h3>Submit en form y button con JavaScript</h3>
+    <p>
+      Un boton <strong>submit</strong> dentro de un formulario envia los datos al servidor usando
+      el atributo <strong>action</strong> y el metodo indicado, como GET o POST. En cambio, un
+      <strong>button</strong> con JavaScript puede ejecutar una accion personalizada, como mostrar
+      un mensaje, validar datos o cambiar contenido sin enviar el formulario directamente.
+    </p>
+  </article>
+
+  <article>
+    <h3>Ruta absoluta y ruta relativa</h3>
+    <p>
+      Una ruta absoluta incluye la dirección completa, por ejemplo
+      <strong>https://www.ejemplo.com/index.html</strong>. Una ruta relativa depende de la
+      ubicacion del archivo actual, por ejemplo <strong>index.html</strong> o
+      <strong>./imagenes/foto.jpg</strong>. Para enlaces internos del proyecto normalmente conviene
+      usar rutas relativas, porque funcionan mejor si el proyecto se mueve de carpeta o servidor.
+    </p>
+  </article>
+</section>
+
+    <!-- Content 4 -->
+    <h2>Elementos que se utilizan en desarrollo Web:</h2>
+  </body>
+  <script>
+    // un error es lo sig: "let log = console.log();"
+    let log = console.log;
+
+    // console.log(document);
+
+
+    /* Función getElementById */
+    let variablePar = document.getElementById("parrafo");
+    log(variablePar);
+
+    log("Bandera");
+
+    log("Bandera 2");
+
+    log("Bander el bueno.......");
+
+    /* Función getElementById 2 */
+    let variablePar2 = document.getElementById("par2");
+    log(variablePar.innerHTML);
+
+    /* Función querySelector */
+    const h1Element = document.querySelector('h1');
+    log(h1Element);
+
+    const list = document.querySelectorAll("ul > li");
+    
+    list.forEach((item) => {
+        log(item.textContent);
+    });
+
+    /* Función createElement */
+    let listaSinOrden = document.createElement("ul");
+
+    document.body.appendChild(listaSinOrden);
+
+    let elementoLista1 = document.createElement("li");
+    elementoLista1.textContent = "HTML";
+    let elementoLista2 = document.createElement("li");
+    elementoLista2.textContent = "CSS";
+    let elementoLista3 = document.createElement("li");
+    elementoLista3.textContent = "JavaScript";
+
+    listaSinOrden.appendChild(elementoLista1);
+    listaSinOrden.appendChild(elementoLista2);
+    listaSinOrden.appendChild(elementoLista3);
+
+    let newH3 = document.createElement("h3");
+    newH3.textContent = "Hola soy unt texto en color negro";
+    document.body.appendChild(newH3);
+
+    const h3 = document.querySelector("h3");
+    h3.style.color = "#32a852";
+
+
+    /* Eventos */
+    let newButton = document.createElement("button");
+    newButton.textContent = "Mostrar Alerta";
+    newButton.setAttribute("id", "btn");
+    document.body.appendChild(newButton);
+
+    const button = document.getElementById("btn");
+
+    button.addEventListener("click", function() {
+      // alert("¡Hola! Has hecho clic en el botón.");
+      //var result = confirm("Desea continuar?");
+      //log(result);
+
+      Swal.fire({
+        title: 'Error!',
+        text: 'Do you want to continue',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+        });
+    });
+</script>
+</html>

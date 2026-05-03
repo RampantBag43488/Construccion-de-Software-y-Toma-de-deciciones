@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Pagina personal HTML</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Mi pagina personal</h1>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mi</a></li>
+                <li><a href="#preguntas">Preguntas</a></li>
+                <li><a href="#fuentes">Fuentes</a></li>
+            </ul>
+        </header>
+
+        <section id="sobre-mi">
+            <h2>Sobre mi</h2>
+
+            <p>
+                Mi nombre es Inaki Mancera. Soy estudiante del Tecnológico de Monterrey
+                y me interesa la tecnologia, los videojuegos y la musica.
+            </p>
+
+            <h3>Datos de contacto</h3>
+            <address>
+                Nombre: Inaki Mancera<br>
+                Matrícula: A01708827<br>
+                Correo electrónico:<a href="mailto:A01708827@tec.mx">A01708827@tec.mx</a><br>
+            </address>
+        </section>
+
+        <section id="preguntas">
+            <h2>Preguntas</h2>
+
+            <article>
+                <h3>1. ¿Cual es la diferencia entre Internet y la World Wide Web?</h3>
+                <p>
+                    Internet es la red global que conecta computadoras, servidores y dispositivos en todo el mundo.
+                    La World Wide Web, es un servicio que funciona sobre Internet y permite acceder a páginas,
+                    documentos, imágenes, videos y otros recursos mediante navegadores web.
+                </p>
+            </article>
+
+            <article>
+                <h3>2. ¿Cuales son las partes de un URL?</h3>
+                <p>
+                    Un URL puede incluir varias partes: el protocolo como <strong>https</strong>, el dominio
+                    como <strong>www.ejemplo.com</strong>, la ruta del recurso como <strong>/carpeta/pagina.html</strong>,
+                    parámetros de consulta como <strong>?id=10</strong>, y un fragmento como <strong>seccion</strong>.
+                </p>
+            </article>
+
+            <article>
+                <h3>3. ¿Cual es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</h3>
+                <p>
+                    Los metodos HTTP indican que accion se quiere realizar sobre un segmento. <strong>GET</strong>
+                    solicita datos, <strong>HEAD</strong> solicita una respuesta similar a GET pero sin el cuerpo,
+                    <strong>POST</strong> envia datos al servidor, <strong>PUT</strong> crea o reemplaza un recurso,
+                    <strong>PATCH</strong> modifica parcialmente un recurso y <strong>DELETE</strong> solicita eliminar
+                    un recurso.
+                </p>
+            </article>
+
+            <article>
+                <h3>4. ¿Que metodo HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contrasena en algun sitio? ¿Por que?</h3>
+                <p>
+                    Se debe utilizar <strong>POST</strong>, porque permite enviar los datos dentro del cuerpo de la
+                    solicitud y no directamente en el URL. Esto es más adecuado para información sensible como usuarios,
+                    contraseñas o datos personales.
+                </p>
+            </article>
+
+            <article>
+                <h3>5. ¿Que metodo HTTP se utiliza cuando a traves de un navegador web se accede a una pagina a traves de un URL?</h3>
+                <p>
+                    Normalmente se utiliza el metodo <strong>GET</strong>, porque el navegador esta solicitando obtener
+                    el contenido de una pagina o recurso web.
+                </p>
+            </article>
+
+            <article>
+                <h3>6. Un servidor web devuelve una respuesta HTTP con codigo 200. ¿Que significa esto? ¿Ocurrio algun error?</h3>
+                <p>
+                    El codigo <strong>200 OK</strong> significa que la solicitud fue exitosa. No ocurrio un error, el
+                    servidor pudo procesar la solicitud correctamente.
+                </p>
+            </article>
+
+            <article>
+                <h3>7. ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intento acceder al sitio y se encontro con un error 404? ¿Por que?</h3>
+                <p>
+                    Depende del caso. Un error <strong>404 Not Found</strong> significa que el recurso solicitado no fue
+                    encontrado. Puede ocurrir porque el usuario escribio mal el enlace, pero tambien puede pasar porque
+                    hay un enlace roto dentro del sitio. Si el error viene de un enlace incorrecto en el sitio,
+                    si es responsabilidad del desarrollador corregirlo.
+                </p>
+            </article>
+
+            <article>
+                <h3>8. ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intento acceder al sitio y se encontro con un error 500? ¿Por que?</h3>
+                <p>
+                    Si, normalmente es responsabilidad del equipo de desarrollo o administracion del servidor revisarlo.
+                    Un error <strong>500 Internal Server Error</strong> indica que ocurrio un problema interno en el
+                    servidor, como una falla de configuracion, error en el codigo o problema con permisos o recursos.
+                </p>
+            </article>
+
+            <article>
+                <h3>9. ¿Que significa que un atributo HTML5 este depreciado o desaprobado? Menciona algunos elementos de HTML 4 que en HTML5 esten desaprobados.</h3>
+                <p>
+                    Que un atributo o elemento este depreciado significa que ya no se recomienda usarlo, aunque algunos
+                    navegadores todavia puedan reconocerlo por compatibilidad. En HTML5 se recomienda separar estructura
+                    y presentacion, por lo que elementos antiguos como <strong>&lt;font&gt;</strong>,
+                    <strong>&lt;center&gt;</strong>, <strong>&lt;big&gt;</strong>, <strong>&lt;strike&gt;</strong> y
+                    <strong>&lt;tt&gt;</strong> estan desaprobados.
+                </p>
+            </article>
+
+            <article>
+                <h3>10. ¿Que componentes de estructura y estilo tiene una tabla?</h3>
+                <p>
+                    Una tabla puede tener elementos de estructura como <strong>&lt;table&gt;</strong>,
+                    <strong>&lt;caption&gt;</strong>, <strong>&lt;thead&gt;</strong>, <strong>&lt;tbody&gt;</strong>,
+                    <strong>&lt;tfoot&gt;</strong>, <strong>&lt;tr&gt;</strong>, <strong>&lt;th&gt;</strong> y
+                    <strong>&lt;td&gt;</strong>. Para el estilo se recomienda usar CSS, por ejemplo para definir bordes,
+                    colores, alineacion, espacios internos y tamanoo de columnas.
+                </p>
+            </article>
+
+            <article>
+                <h3>11. ¿Cuales son los principales controles de una forma HTML5?</h3>
+                <p>
+                    Algunos controles principales son <strong>input</strong> de distintos tipos, como text, email,
+                    password, number, date, radio, checkbox y file, al igual que <strong>select</strong>,
+                    <strong>textarea</strong>, <strong>button</strong>, <strong>label</strong>,
+                    <strong>fieldset</strong> y <strong>legend</strong>.
+                </p>
+            </article>
+
+            <article>
+                <h3>12. Sobre el ciclo de vida y desarrollo de los sistemas de informacion: ¿Cual es el ciclo de vida de los sistemas de informacion? ¿Cual es el ciclo de desarrollo de sistemas de informacion?</h3>
+                <p>
+                    El ciclo de vida de los sistemas de informacion se refiere a todas las etapas por las que pasa un
+                    sistema desde que surge la necesidad de crearlo hasta que se mantiene, mejora o reemplaza. Incluye
+                    la planeacion, analisis, disenio, implementacion, operacion, mantenimiento y eventual retiro.
+                </p>
+
+                <p>
+                    El ciclo de desarrollo de sistemas de informacion se enfoca mas en el proceso de construir el sistema.
+                    Generalmente incluye analisis de requisitos, disenio, programacion, pruebas, implementacion y
+                    mantenimiento. En otras palabras el ciclo de vida ve la existencia completa del sistema, mientras
+                    que el ciclo de desarrollo se concentra en como se crea y evoluciona tecnicamente.
+                </p>
+            </article>
+        </section>
+
+        <section id="fuentes">
+            <h2>Fuentes consultadas</h2>
+
+            <ul>
+                <li>
+                    MDN Web Docs. (2025). <cite>HTTP request methods</cite>.
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods">
+                        https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods
+                    </a>
+                </li>
+
+                <li>
+                    MDN Web Docs. (2026). <cite>HTML elements reference</cite>.
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements">
+                        https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>
+                Pagina creada con <strong>Visual Studio Code</strong>.
+                Sitio oficial del editor:
+                <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+            </p>
+        </footer>
+    </body>
+</html>
